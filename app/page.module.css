@@ -26,7 +26,9 @@
     --button-secondary-hover: #1a1a1a;
   }
 }
-
+.mainbg{
+  background-image: radial-gradient(circle farthest-corner at 100% 50%, #d1d3d6, #fcfcfd);
+}
 .main {
   display: flex;
   flex-direction: column;
