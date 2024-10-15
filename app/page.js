@@ -92,7 +92,7 @@ export default function Home() {
           <CardItem translateZ="100" className="w-full">
             <div className="pt-4 text-md md:text-xl leading-tight text-end">
               <div className="w-fit transition duration-200 ease-linear">
-                <p className="text-lg mb-4 text-start font-bold">I'm a</p>
+                <p className="text-lg mb-4 text-start font-bold">I&apos;m a</p>
               </div>
             
             </div>
@@ -134,7 +134,7 @@ export default function Home() {
           }}
           className="text-2xl md:text-4xl max-w-5x"
         >
-          I'm proficient in Vue2 and the Vue3 framework, but I taught myself how to develop and design React on this website, so I wanted to show my strong self-learning skills and {" "}
+          I&apos;m proficient in Vue2 and the Vue3 framework, but I taught myself how to develop and design React on this website, so I wanted to show my strong self-learning skills and {" "}
           {/* With insomnia, nothing&apos;s real. Everything is far away. Everything
           is a */}
           <Highlight className="bg-gradient-to-r from-orange-300 to-orange-300 text-black dark:text-white">
