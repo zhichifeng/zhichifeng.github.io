@@ -33,4 +33,3 @@ jobs:
         branch: gh-pages
         folder: .next
         clean: true
-        github_token: ${{ secrets.ACCESS_TOKEN }}
