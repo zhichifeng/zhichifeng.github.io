@@ -26,10 +26,11 @@ jobs:
     - name: 打包 🏗️
       run: |
         npm run build
+        ls
     - name: 部署 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: dist
+        folder: build
         clean: true
         ssh-key: ${{ secrets.ACCESS_TOKEN }}
