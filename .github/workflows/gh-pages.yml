@@ -26,7 +26,6 @@ jobs:
     - name: 打包 🏗️
       run: |
         npm run build
-        static_site_generator: next
         touch out/.nojekyll
     - name: 部署 🚀
       uses: JamesIves/github-pages-deploy-action@v4
