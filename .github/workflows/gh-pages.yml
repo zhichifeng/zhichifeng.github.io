@@ -33,4 +33,4 @@ jobs:
         branch: gh-pages
         folder: .next
         clean: true
-        ssh-key: ${{ secrets.ACCESS_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
