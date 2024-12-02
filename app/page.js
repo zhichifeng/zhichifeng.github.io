@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Timeline } from "@/components/ui/timeline";
+import { ThreeDPhotoCarousel } from "@/components/ui/3D-Carousel";
+import TextsComponent from "@/components/js/text"
 export default function Home() {
   return (
     
@@ -18,12 +19,11 @@ export default function Home() {
         </a>
       ))}
     </nav>
+
     <div className="flex text-2xl slate-700 justify-start items-center gap-x-4 "></div>
         </div>
       </header>
       <div className=" new_main__F_vwq w-full overflow-hidden text-slate-700 mainbg">
-
-      
       <div id='home' className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-24 lg:my-32">
         <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
           Circles
@@ -87,7 +87,14 @@ export default function Home() {
             translateZ="60"
             className="text-neutral-500  mt-2 dark:text-neutral-300 w-full border-slate-700 border-b-2 px-2 py-2"
           >
-            <h1 className="font-bold text-4xl text-center text-orange-400">植 炽 锋</h1>
+            {/* <h1 className="font-bold text-4xl text-center text-orange-400">植 炽 锋</h1> */}
+            {/* <TextAnimate text="植 炽 锋" type="fadeInUp" /> */}
+            <div>
+      {/* {texts.map((text, index) => (
+        <TextAnimate key={index} text={text} type="fadeInUp" />
+      ))} */}
+      <TextsComponent></TextsComponent>
+    </div>
           </CardItem>
           <CardItem translateZ="100" className="w-full">
             <div className="pt-4 text-md md:text-xl leading-tight text-end">
@@ -145,10 +152,21 @@ export default function Home() {
       <section id='worktime' className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-24 lg:my-32 lg:mt-64">
       <Timeline data={data} />
       </section>
+      <div className="w-full">
+      <div className="min-h-[500px]  flex flex-col justify-center border border-dashed rounded-lg space-y-4">
+        <div className="p-2">
+          <ThreeDPhotoCarousel />
+        </div>
+      </div>
+    </div>
     </div>
     </main>
   );
 }
+// target
+// clut in 的 3d carousel 做旅游卡片。
+// clut in 的 Fade In Up 做名字。
+// 
 // import OrbitingCircles from "@/components/magicui/orbiting-circles";
 
 // export function OrbitingCirclesDemo() {
@@ -161,6 +179,7 @@ const navigation = [
   { name: "About", href: "/#about" },
   { name: "WorkTime", href: "/#worktime" },
   { name: "Favorite", href: "/#favorite" },];
+const texts = ["123", "456", "789"];
 const data = [
   {
     title: "2024",
@@ -259,6 +278,7 @@ const data = [
   },
 ];
 const Icons = {
+
   weaver: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
