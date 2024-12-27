@@ -2,7 +2,7 @@
 import  { useState, useEffect } from 'react';
 import { TextAnimate } from "@/components/ui/TextAnimate" // 假设TextAnimate组件已经定义
 const TextsComponent = () => {
-    const texts = ["123", "456", "789"];
+    const texts = useState(["123", "456", "789"]);
     const [currentIndex,setCurrentIndex] = useState(0);
   
     useEffect(() => {
@@ -12,11 +12,11 @@ const TextsComponent = () => {
         }else{
             setCurrentIndex((prevIndex) => prevIndex + 1);
         }
-        // setCurrentIndex((currentIndex) => (currentIndex + 1) % texts.length);
+        setCurrentIndex((currentIndex) => (currentIndex + 1) % texts.length);
       }, 2000);
   
       return () => clearInterval(interval);
-    }, [currentIndex]);
+    }, [currentIndex, texts.length]);
   
     return (
       <div>

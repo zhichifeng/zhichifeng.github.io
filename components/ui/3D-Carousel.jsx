@@ -79,6 +79,7 @@ const duration = 0.15
 const transition = { duration, ease: [0.32, 0.72, 0, 1], filter: "blur(4px)" }
 const transitionOverlay = { duration: 0.5, ease: [0.32, 0.72, 0, 1] }
 
+/* eslint-disable react/display-name */
 const Carousel = memo(
   ({
     handleClick,
