@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
@@ -8,7 +7,7 @@ import { ThreeDPhotoCarousel } from "@/components/ui/3D-Carousel";
 import TextsComponent from "@/components/js/text"
 export default function Home() {
   return (
-    
+
     <main className="flex min-h-screen flex-col items-center justify-between">
       <header className="px-4 lg:px-16 xl:px-32 2xl:px-44 fixed w-full backdrop-blur-[2px] bg-gradient-to-gray-50 bg-gradient-to-b from-gray-100 to-gray-100/0 z-20 py-4 border-b-gray-300/10 border-b">
         <div className="flex justify-between ">
@@ -101,27 +100,12 @@ export default function Home() {
               <div className="w-fit transition duration-200 ease-linear">
                 <p className="text-lg mb-4 text-start font-bold">I&apos;m a</p>
               </div>
-            
+              <div className="text-right">
+                web developer
+              </div>
             </div>
           </CardItem>
-          <div className="flex justify-between items-center mt-20">
-            <CardItem
-              translateZ={20}
-              as={Link}
-              href="https://twitter.com/mannupaaji"
-              target="__blank"
-              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-            >
-              Try now →
-            </CardItem>
-            <CardItem
-              translateZ={20}
-              as="button"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-            >
-              Sign up
-            </CardItem>
-          </div>
+
         </CardBody>
       </CardContainer> </div>
       <section id="about" className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-24 lg:my-32 lg:mt-64">
